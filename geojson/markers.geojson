@@ -1,3 +1,3 @@
 {"type": "FeatureCollection","features": [
-{"type": "Feature","geometry": {"type": "Point","coordinates": [0.090220,51.531148]},"properties": {"title": "Greatfields Park","icon": "park","rating": 4.9,"eventIds": [1, 2],"postCode": "IG11 XXX"}},
+{"type": "Feature","geometry": {"type": "Point","coordinates": [0.090220,51.531148]},"properties": {"title": "Greatfields Park","icon": "park","rating": 4.9,"eventIds": [1, 2],"postCode": "IG11 XXX"}}
 ]}
