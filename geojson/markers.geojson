@@ -14,6 +14,20 @@
 				"title": "Greatfields Park",
 				"icon": "monument"
 			}
+		},
+        {
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					1.990220,
+					51.531148
+				]
+			},
+			"properties": {
+				"title": "sgh Park",
+				"icon": "monument"
+			}
 		}
 	]
 }
