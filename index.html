@@ -23,6 +23,17 @@
 		<script>
 			mapboxgl.accessToken = 'pk.eyJ1IjoianN0bi1hcyIsImEiOiJjam9samQ4bDkwOW9vM2txYnRnYmsyOXNxIn0.PHiPtQVUBhRqJQ0vIqSjaQ';
 
+			function loadFile(filePath) {
+				var result = null;
+				var xmlhttp = new XMLHttpRequest();
+				xmlhttp.open("GET", filePath, false);
+				xmlhttp.send();
+				if (xmlhttp.status==200) {
+					result = xmlhttp.responseText;
+				}
+				return result;
+			}
+
 			var map = new mapboxgl.Map({
 				container: 'map',
 				style: 'mapbox://styles/mapbox/streets-v8',
@@ -33,10 +44,8 @@
 
 			map.on('click', 'markers', function(e) {
 				var coordinates = e.features[0].geometry.coordinates.slice();
-				$.getJSON('https://raw.githubusercontent.com/jstn-as/Green-Spaces/master/json/stats.json', function(data) {
-					//data is the JSON string
-					console.log(data)
-				});
+				var stats = loadFile('https://raw.githubusercontent.com/jstn-as/Green-Spaces/master/json/stats.json')
+				console.log(stats);
 			})
 
 			map.on('mouseenter', 'markers', function(e) {
