@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Green Space</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/master.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+		<script src='https://api.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.js'></script>
+		<link href='https://api.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.css' rel='stylesheet'/>
+	</head>
+	<body>
+		<div class="box">
+			<div class="row header">
+				<p>Justinas Grigas</p>
+			</div>
+			<div class="row content" id="map"></div>
+			<div class="row footer">
+				<p>Green Space</p>
+			</div>
+		</div>
+
+		<script>
+			mapboxgl.accessToken = 'pk.eyJ1IjoianN0bi1hcyIsImEiOiJjam9samQ4bDkwOW9vM2txYnRnYmsyOXNxIn0.PHiPtQVUBhRqJQ0vIqSjaQ';
+
+			var map = new mapboxgl.Map({
+				container: 'map',
+				style: 'mapbox://styles/mapbox/streets-v10',
+				center: [0.0815423, 51.5394606],
+				zoom: 14
+			});
+
+			map.on('load', function () {
+				map.addSource('some id', {
+					type: 'geojson',
+					data: 'json/markers.geojson'
+				})
+			});
+		</script>
+	</body>
+</html>
