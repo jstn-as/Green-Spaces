@@ -1,38 +1,15 @@
 {
-  "id": "points",
-  "type": "symbol",
-  "source": {
-    "type": "geojson",
-    "data": {
-      "type": "FeatureCollection",
-      "features": [{
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
-          "coordinates": [0.090220, 51.531148]
-        },
-        "properties": {
-          "title": "Greatfields Park",
-          "icon": "monument"
-        }
-      }, {
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
-          "coordinates": [0.075426, 51.535525]
-        },
-        "properties": {
-          "title": "Barking Abbey Grounds",
-          "icon": "harbor"
-        }
-      }]
-    }
-  },
-  "layout": {
-    "icon-image": "{icon}-15",
-    "text-field": "{title}",
-    "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
-    "text-offset": [0, 0.6],
-    "text-anchor": "top"
-  }
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-79.93345,
+					40.4611
+				]
+			}
+		}
+	]
 }
