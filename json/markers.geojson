@@ -6,9 +6,13 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					-79.93345,
-					40.4611
+					0.090220,
+					51.531148
 				]
+			},
+			"properties": {
+				"title": "Greatfields Park",
+				"icon": "monument"
 			}
 		}
 	]
