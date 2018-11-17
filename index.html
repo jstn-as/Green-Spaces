@@ -31,6 +31,10 @@
 				zoom: 13
 			});
 
+			map.on('click', 'places', function(e) {
+				var coordinates = e.features[0].geometry.coordinates.slice();
+			})
+
 			map.on('load', function () {
 				map.addSource('markers', {
 					type: 'geojson',
