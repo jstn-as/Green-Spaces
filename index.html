@@ -35,6 +35,11 @@
 					data: 'https://raw.githubusercontent.com/jstn-as/Green-Spaces/master/geojson/markers.geojson'
 				})
 
+				map.addSource('outline', {
+					type: 'geojson',
+					data: 'https://raw.githubusercontent.com/jstn-as/Green-Spaces/master/geojson/BarkingOutline.geojson'
+				})
+
 				map.addLayer({
 					'id': 'markers',
 					'type': 'symbol',
@@ -45,6 +50,17 @@
 						'text-font': ["Open Sans Semibold"],
 						'text-offset': [0, 0.6],
 						'text-anchor': 'top'
+					}
+				})
+
+				map.addLayer({
+					'id': 'outline',
+					'type': 'fill',
+					'source': 'outline',
+					'layout': {},
+					'paint': {
+						'fill-color': '#088',
+						'fill-opacity': 0.8
 					}
 				})
 			});
