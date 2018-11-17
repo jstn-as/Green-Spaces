@@ -1,5 +1,5 @@
 {"type": "FeatureCollection","features": [
 {"type": "Feature","geometry": {"type": "Point","coordinates": [0.090220,51.531148]},"properties": {"title": "Greatfields Park","icon": "park-alt"}},
 {"type": "Feature","geometry": {"type": "Point","coordinates": [1.990220,51.531148]},"properties": {"title": "sgh dPark","icon": "parking"}},
-{"type": "Feature","geometry": {"type": "Point","coordinates": [0.09,52]},"properties": {"title": "Bob's own park","icon": "park"}},
+{"type": "Feature","geometry": {"type": "Point","coordinates": [0.09,52]},"properties": {"title": "Bob's own park","icon": "park"}}
 ]}
