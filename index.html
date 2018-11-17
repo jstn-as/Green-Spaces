@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>Green Space</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 		<link rel="stylesheet" type="text/css" href="css/master.css">
 		<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
 		<script src='https://api.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.js'></script>
@@ -30,9 +30,22 @@
 			});
 
 			map.on('load', function () {
-				map.addSource('some id', {
+				map.addSource('markers', {
 					type: 'geojson',
 					data: 'https://raw.githubusercontent.com/jstn-as/Green-Spaces/master/json/markers.geojson'
+				})
+
+				map.addLayer({
+					'id': 'markers',
+					'type': 'symbol',
+					'source': 'markers',
+					'layout': {
+						'icon-image': "{icon}-15",
+						'text-field': "{title}",
+						'text-font': ["Roboto Slab", "Open Sans Semibold"],
+						'text-offset': [0, 0.6],
+						'text-anchor': 'top'
+					}
 				})
 			});
 		</script>
