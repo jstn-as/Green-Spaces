@@ -1,4 +1,4 @@
-{"locations":[
+[
 {"title": "Greatfields Park","rating": 4.9, "events": [1, 2]},
 {"title": "Elizabeth Fry Open Space","rating": 4.2, "events": [1]},
 {"title": "Barking Library Open Space","rating": 3.9, "events": [8]},
@@ -8,4 +8,4 @@
 {"title": "Lindsell Road Open Space","rating": 4.3, "events": [12]},
 {"title": "Beam Valley Country Park","rating": 4.8, "events": []},
 {"title": "Eagle Avenue Open Space","rating": 4.9, "events": [14]}
-]}
+]

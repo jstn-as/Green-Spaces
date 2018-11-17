@@ -1,8 +1,8 @@
 {"type": "FeatureCollection","features": [
-{"type": "Feature","geometry": {"type": "Point","coordinates": [51.531148,0.090220]},"properties": {"title": "Greatfields Park","icon": "park"}},
+{"type": "Feature","geometry": {"type": "Point","coordinates": [0.090220,51.531148]},"properties": {"title": "Greatfields Park","icon": "park"}},
 {"type": "Feature","geometry": {"type": "Point","coordinates": [0.076588,51.540304]},"properties": {"title": "Elizabeth Fry Open Space","icon": "marker"}},
 {"type": "Feature","geometry": {"type": "Point","coordinates": [0.079167,51.536276]},"properties": {"title": "Barking Library Open Space","icon": "marker"}},
-{"type": "Feature","geometry": {"type": "Point","coordinates": [0.075426,51.535525]},"properties": {"title": "Barking Abbey Grounds","icon": "marker"}},
+{"type": "Feature","geometry": {"type": "Point","coordinates": [0.075426,51.535525]},"properties": {"title": "Barking Abbey Grounds","icon": "park"}},
 {"type": "Feature","geometry": {"type": "Point","coordinates": [0.085115,51.535021]},"properties": {"title": "Westbury Road Open Space","icon": "marker"}},
 {"type": "Feature","geometry": {"type": "Point","coordinates": [0.077770,51.533250]},"properties": {"title": "Hadwicke Street Open Space","icon": "marker"}},
 {"type": "Feature","geometry": {"type": "Point","coordinates": [0.077076,51.533469]},"properties": {"title": "Lindsell Road Open Space","icon": "marker"}},
