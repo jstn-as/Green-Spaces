@@ -1,6 +1,11 @@
 {"locations":[
 {"title": "Greatfields Park","rating": 4.9, "events": [1, 2]},
-{"title": "Bob's own park","rating": 4.5, "events": [1, 2]},
-{"title": "Ninja park","rating": 3, "events": [3]},
-{"title": "ASD","rating": 2.1, "events": [6, 12]}
+{"title": "Elizabeth Fry Open Space","rating": 4.2, "events": [1]},
+{"title": "Barking Library Open Space","rating": 3.9, "events": [8]},
+{"title": "Barking Abbey Grounds","rating": 2.8, "events": [7]},
+{"title": "Westbury Road Open Space","rating": 3.7, "events": [9]},
+{"title": "Hadwicke Street Open Space","rating": 2.1, "events": [11]},
+{"title": "Lindsell Road Open Space","rating": 4.3, "events": [12]},
+{"title": "Beam Valley Country Park","rating": 4.8, "events": []},
+{"title": "Eagle Avenue Open Space","rating": 4.9, "events": [14]}
 ]}
