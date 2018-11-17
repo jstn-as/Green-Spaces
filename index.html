@@ -25,14 +25,22 @@
 
 			var map = new mapboxgl.Map({
 				container: 'map',
-				style: 'mapbox://styles/mapbox/streets-v10',
+				style: 'mapbox://styles/mapbox/streets-v8',
 				center: [0.0815423, 51.5394606],
 				/*center: [-68.13734351262877, 45.137451890638886],*/
 				zoom: 13
 			});
 
-			map.on('click', 'places', function(e) {
+			map.on('click', 'markers', function(e) {
 				var coordinates = e.features[0].geometry.coordinates.slice();
+			})
+
+			map.on('mouseenter', 'markers', function(e) {
+				map.getCanvas().style.cursor = 'pointer';
+			})
+
+			map.on('mouseleave', 'markers', function(e) {
+				map.getCanvas().style.cursor = '';
 			})
 
 			map.on('load', function () {
