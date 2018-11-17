@@ -33,6 +33,10 @@
 
 			map.on('click', 'markers', function(e) {
 				var coordinates = e.features[0].geometry.coordinates.slice();
+				$.getJSON('https://raw.githubusercontent.com/jstn-as/Green-Spaces/master/json/stats.json', function(data) {
+					//data is the JSON string
+					console.log(data)
+				});
 			})
 
 			map.on('mouseenter', 'markers', function(e) {
