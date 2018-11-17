@@ -1,3 +1,6 @@
 {"type": "FeatureCollection","features": [
-{"type": "Feature","geometry": {"type": "Point","coordinates": [0.090220,51.531148]},"properties": {"title": "Greatfields Park","icon": "park","rating": 4.9,"eventIds": [1, 2],"postCode": "IG11 XXX"}}
+{"type": "Feature","geometry": {"type": "Point","coordinates": [0.090220,51.531148]},"properties": {"title": "Greatfields Park","icon": "park-alt"}},
+{"type": "Feature","geometry": {"type": "Point","coordinates": [51.53,0.085]},"properties": {"_title": "Bob's own park","_icon": "marker"}},
+{"type": "Feature","geometry": {"type": "Point","coordinates": [52,0.001]},"properties": {"title": "Ninja park","_icon": "marker-stroked"}},
+{"type": "Feature","geometry": {"type": "Point","coordinates": [55.5,0.07]},"properties": {"title": "ASD","_icon": "marker-stroked"}}
 ]}
