@@ -15,7 +15,7 @@ class MarkerManager:
 
 		# Add the new marker to the geojson file.
 		line_to_add = '{"type": "Feature","geometry": {"type": "Point","coordinates": [%s,%s]},"properties": ' + \
-			'{"title": "%s","_icon": "%s"}},'
+			'{"title": "%s","icon": "%s"}},'
 		line_to_add = line_to_add % (str(_lat), str(_long), _title, _icon)
 		marker_array.insert(len(marker_array) - 1, line_to_add)
 

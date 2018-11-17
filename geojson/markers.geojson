@@ -1,6 +1,6 @@
 {"type": "FeatureCollection","features": [
-{"type": "Feature","geometry": {"type": "Point","coordinates": [0.090220,51.531148]},"properties": {"title": "Greatfields Park","icon": "park"}},
-{"type": "Feature","geometry": {"type": "Point","coordinates": [0.085, 51.53]},"properties": {"_title": "Bob's own park","_icon": "marker"}},
-{"type": "Feature","geometry": {"type": "Point","coordinates": [0.001, 52]},"properties": {"title": "Ninja park","_icon": "park"}},
-{"type": "Feature","geometry": {"type": "Point","coordinates": [0.07, 55.5]},"properties": {"title": "ASD","_icon": "marker-stroked"}}
+{"type": "Feature","geometry": {"type": "Point","coordinates": [0.090220,51.531148]},"properties": {"title": "Greatfields Park","icon": "park-alt"}},
+{"type": "Feature","geometry": {"type": "Point","coordinates": [0.085, 51.53]},"properties": {"_title": "Bob's own park","icon": "marker"}},
+{"type": "Feature","geometry": {"type": "Point","coordinates": [0.001, 52]},"properties": {"title": "Ninja park","icon": "marker-stroked"}},
+{"type": "Feature","geometry": {"type": "Point","coordinates": [0.07, 55.5]},"properties": {"title": "ASD","icon": "marker-stroked"}}
 ]}
