@@ -101,8 +101,8 @@ try:
 
 		elif option == 1:
 			title = str(input("\n~ Adding a marker ~\nName of the location\n: "))
-			lat = str(input("Latitude\n: "))
-			long = str(input("Longitude\n: "))
+			long = str(input("Longitude (0.005)\n: "))
+			lat = str(input("Latitude (52.01)\n: "))
 			icon = str(input("Icon\n: "))
 			rating = str(input("Rating\n: "))
 			events = str(input("Events\n: "))
