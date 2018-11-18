@@ -13,7 +13,7 @@
 	<body>
 		<div class="box">
 			<div class="row header">
-				<table>
+				<table class="table header">
 					<tr>
 						<th><h2>Justinas Grigas<h2></th>
 						<th>Input field</th>
@@ -31,6 +31,14 @@
 		</div>
 
 		<script>
+		function openForm() {
+		    document.getElementById("myForm").style.display = "block";
+		}
+
+		function closeForm() {
+		    document.getElementById("myForm").style.display = "none";
+		}
+
 			mapboxgl.accessToken = 'pk.eyJ1IjoianN0bi1hcyIsImEiOiJjam9samQ4bDkwOW9vM2txYnRnYmsyOXNxIn0.PHiPtQVUBhRqJQ0vIqSjaQ';
 			var dataList = []
 
@@ -88,7 +96,30 @@
 				'<tr><th>Activity</th><th>Type</th><th>Date</th><th>Time</th><th>Duration</th></tr>' +
 				events +
 				'</table>' +
-				'<button class="hostButton">Host an activity</button>';
+				'<button class="hostButton" onclick="openForm()">Host an activity</button>'+
+
+				'<div class="form-popup" id="myForm">'+
+				'<form action="/action_page.php" class="form-container">'+
+				'<h1>Host an event</h1>'+
+				'<label for="email"><b>Activity</b></label><br>'+
+				'<input type="radio" name="activity" value="Basketball" checked>Basketball<br>'+
+				'<input type="radio" name="activity" value="Basketball" checked>Football<br>'+
+				'<input type="radio" name="activity" value="Basketball" checked>Cricket<br>'+
+				'<input type="radio" name="activity" value="Basketball" checked>Tennis<br>'+
+
+				'<label for="email"><b>Type</b></label><br>'+
+				'<input type="radio" name="type" value="Basketball" checked>Tournament<br>'+
+				'<input type="radio" name="type" value="Basketball" checked>Session<br>'+
+
+				'<label for="email"><b>Event start</b></label><br>'+
+				'<input type="datetime-local" name="eventTime"><br>'+
+
+				'<label for="email"><b>Event duration</b></label><br>'+
+				'<input type="time" name="eventDuration"><br>'+
+
+				'<button type="submit" class="btn">Host</button>'+
+				'<button type="button" class="btn cancel" onclick="closeForm()">Close</button></form>' +
+				'</div>';
 
 				new mapboxgl.Popup()
 					.setLngLat(coordinates)
