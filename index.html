@@ -32,8 +32,7 @@
 
 		<script>
 			mapboxgl.accessToken = 'pk.eyJ1IjoianN0bi1hcyIsImEiOiJjam9samQ4bDkwOW9vM2txYnRnYmsyOXNxIn0.PHiPtQVUBhRqJQ0vIqSjaQ';
-			var stats = []
-			var events = []
+			var dataList = []
 
 			var jsonFiles = ["https://raw.githubusercontent.com/jstn-as/Green-Spaces/master/json/stats.json",
 			"https://raw.githubusercontent.com/jstn-as/Green-Spaces/master/json/events.json"]
@@ -46,7 +45,7 @@
 				request.onreadystatechange = function() {
 					if(request.readyState === XMLHttpRequest.DONE && request.status === 200) {
 						var data = JSON.parse(request.responseText);
-						console.log('-->' + data);
+						dataList.push(data);
 					}
 				}
 				request.send();
@@ -66,23 +65,28 @@
 				while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
 					coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
 				}
-				console.log(stats);
 				var title = e.features[0].properties.title;
 				var index = 0;
 
-				for (var i = 0; i < stats.length; i++) {
-					if (stats[i].title == title)
+				for (var i = 0; i < dataList[0].length; i++) {
+					if (dataList[0][i].title == title)
 					{
 						index = i;
 					}
 				}
 
-				console.log(events);
+				console.log(dataList);
 
-				var post = stats[index].title + '<br> Rating: *' +  stats[index].rating +
+				var events = ""
+				for (var i = 0; i < dataList[0][index].events.length; i++) {
+					var currentEvent = dataList[1][dataList[0][index].events[i]];
+					events += "<tr><th>"+currentEvent.activity+"</th><th>"+currentEvent.type+"</th><th>"+currentEvent.date+"</th><th>"+currentEvent.time+"</th><th>"+currentEvent.duration+"</th><th class ='joinButton'>Join!</tr>";
+				}
+
+				var post = dataList[0][index].title + '<br> Rating: *' +  dataList[0][index].rating +
 				'<br><table>' +
 				'<tr><th>Activity</th><th>Type</th><th>Date</th><th>Time</th><th>Duration</th></tr>' +
-				'<tr><th>Basketball</th><th>Tournament</th><th>19/11/2018</th><th>16:00</th><th>02:00</th><th class="joinButton">Join</th></tr>' +
+				events +
 				'</table>' +
 				'<button class="hostButton">Host an activity</button>';
 
