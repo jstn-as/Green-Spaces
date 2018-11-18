@@ -7,12 +7,13 @@
 		<link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet">
 		<script src='https://api.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.js'></script>
 		<link href='https://api.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.css' rel='stylesheet'/>
+		<link rel="shortcut icon" type="image/png" href="png/greenspace.png"/>
 		<link rel="stylesheet" type="text/css" href="css/master.css">
 	</head>
 	<body>
 		<div class="box">
 			<div class="row header">
-				<p>Justinas Grigas</p>
+				<h2>Justinas Grigas</h2>
 			</div>
 			<div class="row content" id="map"></div>
 			<div class="row footer">
@@ -81,6 +82,8 @@
 			})
 
 			map.on('load', function () {
+				map.loadImage("")
+
 				map.addSource('markers', {
 					type: 'geojson',
 					data: 'https://raw.githubusercontent.com/jstn-as/Green-Spaces/master/geojson/markers.geojson'

@@ -1,6 +1,7 @@
 class MarkerManager:
 	geojson_path = "../geojson/markers.geojson"
 	json_path = "../json/stats.json"
+	events_path = "../json/events.json"
 
 	def add_marker(self, _title, _icon, _lat, _long, _rating, _events):
 		# Get the marker data from the geojson file.
@@ -68,6 +69,22 @@ class MarkerManager:
 				json_file.write(marker_array[i] + "\n")
 		json_file.close()
 
+	def add_event(self, id, activity, type, date, time, duration):
+		events_file = open(self.events_path, "r")
+		events_array = events_file.read().splitlines()
+		events_file.close()
+
+		event = '{"id": %s, "activity": "%s", "type": "%s", "date": "%s", "time": "%s", "duration": "%s"},'
+		event = event % (id, activity, type, date, time, duration)
+
+		events_array.insert(len(events_array) - 1, event)
+		events_array = self.check_commas(events_array)
+
+		events_file = open(self.events_path, "w")
+		for line in events_array:
+			events_file.write(line + "\n")
+		events_file.close()
+
 	def get_markers(self):
 		geojson_file = open(self.geojson_path, "r")
 		return geojson_file.read().splitlines()
@@ -89,7 +106,7 @@ class MarkerManager:
 markerManager = MarkerManager()
 try:
 	while True:
-		option = int(input("\n~ Choose an option ~\nList: 0\nAdd: 1\nRemove: 2\nEdit: 3\nQuit: 4\n: "))
+		option = int(input("\n~ Choose an option ~\nList: 0\nAdd: 1\nRemove: 2\nEdit: 3\nAdd Event: 4\nQuit: 5\n: "))
 
 		if option == 0:
 			print("\n~ Listing the markers ~")
@@ -117,6 +134,9 @@ try:
 			markerManager.remove_marker(markerToRemove + 1)
 
 		elif option == 4:
+			print("\n~ Adding an event ~")
+
+		elif option == 5:
 			quit()
 except KeyboardInterrupt:
 	quit()
