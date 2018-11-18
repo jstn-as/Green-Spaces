@@ -82,7 +82,10 @@
 			})
 
 			map.on('load', function () {
-				map.loadImage("")
+				map.loadImage("https://raw.githubusercontent.com/jstn-as/Green-Spaces/master/png/greenspace.png", function(error, image) {
+					if (error) throw error;
+					map.addImage("greenSpace", image);
+				})
 
 				map.addSource('markers', {
 					type: 'geojson',
