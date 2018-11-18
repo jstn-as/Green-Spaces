@@ -1,51 +1,67 @@
+* {
+	font-family: 'Roboto', sans-serif;
+}
+
 html, body {
-		height: 100%;
-		margin: 0;
-		font-family: 'Share Tech Mono', monospace;
-		font-size: 16px;
+	height: 100%;
+	margin: 0;
+	font-size: 16px;
 }
 
 .box {
-		display: flex;
-		flex-flow: column;
-		height: 100%;
+	display: flex;
+	flex-flow: column;
+	height: 100%;
 }
 
 .box .row {
-		border-style: solid;
-		border-width: 1px;
+	border-style: solid;
+	border-width: 1px;
 }
 
 .box .row.header {
-		flex-grow: 0 1 auto;
+	flex-grow: 0 1 auto;
 }
 
 .box .row.content {
-		flex: 1 1 auto;
+	flex: 1 1 auto;
 }
 
 .box .row.footer {
-		flex: 0 1 40px;
+	flex: 0 1 40px;
 }
 
 .mapboxgl-popup-content {
-	font-family: 'Share Tech Mono', monospace;
+	font-weight: normal;
 	font-size: 16px;
 	padding: 20px;
 	box-shadow: none;
-	border: 1px solid;
+	border: 2px solid;
 	border-radius: 10px;
 }
 
 .joinButton {
-	background: green;
+	background: #28c641;
 }
 
 .hostButton {
-	border: 1px;
+	font-size: 16px;
+
+	padding: 10px;
+	border: 1px solid;
+	text-decoration: none;
+	width: 100%;
 }
 
 th {
-	border: 1px solid;
+	padding: 3px 6px 3px 6px;
 	font-weight: normal;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+table {
+	border: 1px solid;
 }
