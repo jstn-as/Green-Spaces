@@ -4,10 +4,10 @@
 		<title>Green Space</title>
 		<meta charset="utf-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-		<link rel="stylesheet" type="text/css" href="css/master.css">
-		<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
 		<script src='https://api.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.js'></script>
 		<link href='https://api.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.css' rel='stylesheet'/>
+		<link rel="stylesheet" type="text/css" href="css/master.css">
 	</head>
 	<body>
 		<div class="box">
@@ -22,6 +22,17 @@
 
 		<script>
 			mapboxgl.accessToken = 'pk.eyJ1IjoianN0bi1hcyIsImEiOiJjam9samQ4bDkwOW9vM2txYnRnYmsyOXNxIn0.PHiPtQVUBhRqJQ0vIqSjaQ';
+			stats = []
+
+			var xmlhttp = new XMLHttpRequest();
+			xmlhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+					var myObj = JSON.parse(this.responseText);
+					stats = myObj;
+				}
+			};
+			xmlhttp.open("GET", "https://raw.githubusercontent.com/jstn-as/Green-Spaces/master/json/stats.json", true);
+			xmlhttp.send();
 
 			var map = new mapboxgl.Map({
 				container: 'map',
@@ -33,15 +44,32 @@
 
 			map.on('click', 'markers', function(e) {
 				var coordinates = e.features[0].geometry.coordinates.slice();
-				var xmlhttp = new XMLHttpRequest();
-				xmlhttp.onreadystatechange = function() {
-					if (this.readyState == 4 && this.status == 200) {
-						var myObj = JSON.parse(this.responseText);
-						console.log(myObj.locations[0].title);
+
+				while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+					coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+				}
+				console.log(stats);
+				var title = e.features[0].properties.title;
+				var index = 0;
+
+				for (var i = 0; i < stats.length; i++) {
+					if (stats[i].title == title)
+					{
+						index = i;
 					}
-				};
-				xmlhttp.open("GET", "https://raw.githubusercontent.com/jstn-as/Green-Spaces/master/json/stats.json", true);
-				xmlhttp.send();
+				}
+
+				var post = stats[index].title + '<br> Rating: *' +  stats[index].rating +
+				'<br><table>' +
+				'<tr><th>Activity</th><th>Type</th><th>Date</th><th>Time</th><th>Duration</th></tr>' +
+				'<tr><th>Basketball</th><th>Tournament</th><th>19/11/2018</th><th>16:00</th><th>02:00</th><th class="joinButton">Join</th></tr>' +
+				'</table>' +
+				'<button class="hostButton">Host an activity</button>';
+
+				new mapboxgl.Popup()
+					.setLngLat(coordinates)
+					.setHTML(post)
+					.addTo(map);
 			})
 
 			map.on('mouseenter', 'markers', function(e) {
