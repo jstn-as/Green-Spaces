@@ -1,12 +1,12 @@
 [
 {"id": 1, "activity": "Basketball", "type": "Tournament", "date": "19/11/2018", "time": "16:00", "duration": "2:00"},
-{"event_id": 2, "activity": "Football", "event_type": "Tournament", "date": "20/11/2018", "time": "16:30", "duration": "02:00"},
-{"event_id": 3, "activity": "Yoga", "event_type": "Session", "date": "19/11/2018", "time": "12:00", "duration": "01:00"},
-{"event_id": 4, "activity": "Table Tennis", "event_type": "Tournament", "date": "19/12/2018", "time": "12:00", "duration": "01:30"},
-{"event_id": 5, "activity": "Squash", "event_type": "Tournament", "date": "22/12/2018", "time": "12:30", "duration": "01:30"},
-{"event_id": 6, "activity": "Table Tennis", "event_type": "Session", "date": "27/11/2018", "time": "12:45", "duration": "01:00"},
-{"event_id": 7, "activity": "Wallball", "event_type": "Tournament", "date": "19/11/2018", "time": "17:30", "duration": "02:00"}
-{"event_id": 8, "activity": "Football", "event_type": "Tournament", "date": "28/11/2018", "time": "12:30", "duration": "02:00"}
-{"event_id": 9, "activity": "Basketball Shooting", "event_type": "Session", "date": "07/12/2018", "time": "13:30", "duration": "02:00"}
-{"event_id": 10, "activity": "Basketball Passing", "event_type": "Session", "date": "07/12/2018", "time": "13:30", "duration": "00:30"}
+{"id": 2, "activity": "Football", "type": "Tournament", "date": "20/11/2018", "time": "16:30", "duration": "02:00"},
+{"id": 3, "activity": "Yoga", "type": "Session", "date": "19/11/2018", "time": "12:00", "duration": "01:00"},
+{"id": 4, "activity": "Table Tennis", "type": "Tournament", "date": "19/12/2018", "time": "12:00", "duration": "01:30"},
+{"id": 5, "activity": "Squash", "type": "Tournament", "date": "22/12/2018", "time": "12:30", "duration": "01:30"},
+{"id": 6, "activity": "Table Tennis", "type": "Session", "date": "27/11/2018", "time": "12:45", "duration": "01:00"},
+{"id": 7, "activity": "Wallball", "type": "Tournament", "date": "19/11/2018", "time": "17:30", "duration": "02:00"}
+{"id": 8, "activity": "Football", "type": "Tournament", "date": "28/11/2018", "time": "12:30", "duration": "02:00"}
+{"id": 9, "activity": "Basketball Shooting", "type": "Session", "date": "07/12/2018", "time": "13:30", "duration": "02:00"}
+{"id": 10, "activity": "Basketball Passing", "type": "Session", "date": "07/12/2018", "time": "13:30", "duration": "00:30"}
 ]
