@@ -7,5 +7,8 @@
 {"type": "Feature","geometry": {"type": "Point","coordinates": [0.077770,51.533250]},"properties": {"title": "Hadwicke Street Open Space","icon": "greenSpace"}},
 {"type": "Feature","geometry": {"type": "Point","coordinates": [0.077076,51.533469]},"properties": {"title": "Lindsell Road Open Space","icon": "greenSpace"}},
 {"type": "Feature","geometry": {"type": "Point","coordinates": [0.165204,51.532564]},"properties": {"title": "Beam Valley Country Park","icon": "greenSpace"}},
-{"type": "Feature","geometry": {"type": "Point","coordinates": [0.137140,51.573117]},"properties": {"title": "Eagle Avenue Open Space","icon": "greenSpace"}}
+{"type": "Feature","geometry": {"type": "Point","coordinates": [0.137140,51.573117]},"properties": {"title": "Eagle Avenue Open Space","icon": "greenSpace"}},
+{"event_type": "Feature","geometry": {"event_type": "Point","coordinates": [0.088677,51.536288]},"properties": {"title": "Essex Road Open Space","icon": "greenSpace"}},
+{"event_type": "Feature","geometry": {"event_type": "Point","coordinates": [0.073084,51.540142]},"properties": {"title": "Cowbridge Lane Open Space","icon": "greenSpace"}},
+{"event_type": "Feature","geometry": {"event_type": "Point","coordinates": [0.070245,51.541056]},"properties": {"title": "Mersea House Open Space","icon": "greenSpace"}}
 ]}

@@ -7,5 +7,8 @@
 {"title": "Hadwicke Street Open Space","rating": 2.1, "events": []},
 {"title": "Lindsell Road Open Space","rating": 4.3, "events": [5]},
 {"title": "Beam Valley Country Park","rating": 4.8, "events": [6]},
-{"title": "Eagle Avenue Open Space","rating": 4.9, "events": [7, 8, 9]}
+{"title": "Eagle Avenue Open Space","rating": 4.9, "events": [7, 8, 9]},
+{"title": "Essex Road Open Space","rating": 2.3, "events": [3]},
+{"title": "Cowbridge Lane Open Space","rating": 2.9, "events": [2]},
+{"title": "Mersea House Open Space","rating": 3.9, "events": [3]}
 ]
