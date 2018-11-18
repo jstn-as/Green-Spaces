@@ -37,21 +37,20 @@
 
 			var jsonFiles = ["https://raw.githubusercontent.com/jstn-as/Green-Spaces/master/json/stats.json",
 			"https://raw.githubusercontent.com/jstn-as/Green-Spaces/master/json/events.json"]
-			var request = new XMLHttpRequest();
-			(function loop(i, length) {
-				if (i>= length) return;
+
+			for (var i = 0; i < jsonFiles.length; i++) {
 				var url = jsonFiles[i];
 
+				let request = new XMLHttpRequest();
 				request.open("GET", url);
 				request.onreadystatechange = function() {
 					if(request.readyState === XMLHttpRequest.DONE && request.status === 200) {
 						var data = JSON.parse(request.responseText);
-						console.log('-->' + i + ' id: ' + data._id);
-						loop(i + 1, length);
+						console.log('-->' + data);
 					}
 				}
 				request.send();
-			})(0, jsonFiles.length);
+			}
 
 			var map = new mapboxgl.Map({
 				container: 'map',
