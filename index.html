@@ -39,9 +39,7 @@
 			"https://raw.githubusercontent.com/jstn-as/Green-Spaces/master/json/events.json"]
 			var request = new XMLHttpRequest();
 			(function loop(i, length) {
-				if (i>= length) {
-					return;
-				}
+				if (i>= length) return;
 				var url = jsonFiles[i];
 
 				request.open("GET", url);
@@ -58,7 +56,7 @@
 			var map = new mapboxgl.Map({
 				container: 'map',
 				style: 'mapbox://styles/mapbox/outdoors-v10',
-				center: [0.080308, 51.536146],
+				center: [0.082389, 51.535599],
 				/*center: [-68.13734351262877, 45.137451890638886],*/
 				zoom: 14
 			});
