@@ -13,7 +13,16 @@
 	<body>
 		<div class="box">
 			<div class="row header">
-				<h2>Justinas Grigas</h2>
+				<table>
+					<tr>
+						<th><h2>Justinas Grigas<h2></th>
+						<th>Input field</th>
+						<th>Options</th>
+					</tr>
+					<tr>
+						<th>Reputation</th>
+					</tr>
+				</table>
 			</div>
 			<div class="row content" id="map"></div>
 			<div class="row footer">
@@ -25,6 +34,7 @@
 			mapboxgl.accessToken = 'pk.eyJ1IjoianN0bi1hcyIsImEiOiJjam9samQ4bDkwOW9vM2txYnRnYmsyOXNxIn0.PHiPtQVUBhRqJQ0vIqSjaQ';
 			stats = []
 
+			// Get stats.
 			var xmlhttp = new XMLHttpRequest();
 			xmlhttp.onreadystatechange = function() {
 				if (this.readyState == 4 && this.status == 200) {
@@ -59,6 +69,17 @@
 						index = i;
 					}
 				}
+
+				// Get events.
+				var xmlhttp = new XMLHttpRequest();
+				xmlhttp.onreadystatechange = function() {
+					if (this.readyState == 4 && this.status == 200) {
+						var myObj = JSON.parse(this.responseText);
+						stats = myObj;
+					}
+				};
+				xmlhttp.open("GET", "https://raw.githubusercontent.com/jstn-as/Green-Spaces/master/json/stats.json", true);
+				xmlhttp.send();
 
 				var post = stats[index].title + '<br> Rating: *' +  stats[index].rating +
 				'<br><table>' +

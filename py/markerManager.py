@@ -74,7 +74,7 @@ class MarkerManager:
 		events_array = events_file.read().splitlines()
 		events_file.close()
 
-		event = '{"event_id": %s, "activity": "%s", "event_type": "%s", "date": "%s", "time": "%s", "duration": "%s"},'
+		event = '{"id": %s, "activity": "%s", "type": "%s", "date": "%s", "time": "%s", "duration": "%s"},'
 		event = event % (event_id, activity, event_type, date, time, duration)
 
 		events_array.insert(len(events_array) - 1, event)
