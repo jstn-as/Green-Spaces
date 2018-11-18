@@ -15,7 +15,7 @@ class MarkerManager:
 		json_file.close()
 
 		# Add the new marker to the geojson file.
-		line_to_add = '{"type": "Feature","geometry": {"type": "Point","coordinates": [%s,%s]},"properties": ' + \
+		line_to_add = '{"event_type": "Feature","geometry": {"event_type": "Point","coordinates": [%s,%s]},"properties": ' + \
 			'{"title": "%s","icon": "%s"}},'
 		line_to_add = line_to_add % (str(_lat), str(_long), _title, _icon)
 		marker_array.insert(len(marker_array) - 1, line_to_add)
@@ -69,13 +69,13 @@ class MarkerManager:
 				json_file.write(marker_array[i] + "\n")
 		json_file.close()
 
-	def add_event(self, id, activity, type, date, time, duration):
+	def add_event(self, event_id, activity, event_type, date, time, duration):
 		events_file = open(self.events_path, "r")
 		events_array = events_file.read().splitlines()
 		events_file.close()
 
-		event = '{"id": %s, "activity": "%s", "type": "%s", "date": "%s", "time": "%s", "duration": "%s"},'
-		event = event % (id, activity, type, date, time, duration)
+		event = '{"event_id": %s, "activity": "%s", "event_type": "%s", "date": "%s", "time": "%s", "duration": "%s"},'
+		event = event % (event_id, activity, event_type, date, time, duration)
 
 		events_array.insert(len(events_array) - 1, event)
 		events_array = self.check_commas(events_array)
@@ -135,6 +135,13 @@ try:
 
 		elif option == 4:
 			print("\n~ Adding an event ~")
+			event_id = str(input("ID\n: "))
+			activity = str(input("Activity\n: ")).lower().title()
+			event_type = str(input("Type\n: "))
+			date = str(input("Date\n: "))
+			time = str(input("Time\n: "))
+			duration = str(input("Duration\n: "))
+			markerManager.add_event(event_id, activity, event_type, date, time, duration)
 
 		elif option == 5:
 			quit()

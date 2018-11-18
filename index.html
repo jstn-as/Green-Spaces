@@ -82,10 +82,6 @@
 			})
 
 			map.on('load', function () {
-				map.loadImage("https://raw.githubusercontent.com/jstn-as/Green-Spaces/master/png/greenspace.png", function(error, image) {
-					if (error) throw error;
-					map.addImage("greenSpace", image);
-				})
 
 				map.addSource('markers', {
 					type: 'geojson',
@@ -97,17 +93,23 @@
 					data: 'https://raw.githubusercontent.com/jstn-as/Green-Spaces/master/geojson/BarkingOutline.geojson'
 				})
 
-				map.addLayer({
-					'id': 'markers',
-					'type': 'symbol',
-					'source': 'markers',
-					'layout': {
-						'icon-image': "{icon}-15",
-						'text-field': "{title}",
-						'text-font': ["Open Sans Semibold"],
-						'text-offset': [0, 0.6],
-						'text-anchor': 'top'
-					}
+				map.loadImage("https://raw.githubusercontent.com/jstn-as/Green-Spaces/master/png/greenspace.png", function(error, image) {
+					if (error) throw error;
+					map.addImage("greenSpace", image);
+
+					map.addLayer({
+						'id': 'markers',
+						'type': 'symbol',
+						'source': 'markers',
+						'layout': {
+							'icon-image': "greenSpace",
+							'icon-size': 0.08,
+							'text-field': "{title}",
+							'text-font': ["Open Sans Semibold"],
+							'text-offset': [0, 0.6],
+							'text-anchor': 'top'
+						}
+					})
 				})
 
 				map.addLayer({
